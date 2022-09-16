@@ -9,26 +9,42 @@ export default function SearchResults() {
   const [loading, setloading] = useState(true);
   const [searchQuery, setsearchQuery] = useState("");
   const { id } = useParams();
-  
+
   useEffect(() => async () => {
-    if (loading) {
-      
-      let url = "https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query=lg";
-      
-      let data = await fetch(url, {
-        headers: {
-            'Fk-Affiliate-Id': 'harshit960',
-            'Fk-Affiliate-Token': '403145a980b743eba1582a1626407ba4',
-            
+    
+      let url =
+        "https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query=lg";
+      const axios = require("axios");
+
+      const response = await axios.get(
+        "https://affiliate-api.flipkart.net/affiliate/1.0/search.json",
+        {
+          params: {
+            query: "spiderman",
+          },
+          headers: {
+            "Fk-Affiliate-Id": "harshit960",
+            "Fk-Affiliate-Token": "403145a980b743eba1582a1626407ba4",
+            "Access-Control-Allow-Origin": "localhost",
+          },
         }
-    });
+      );
+      console.log(response);
+      let data = fetch(url, {
+        headers: {
+          "Fk-Affiliate-Id": "harshit960",
+          "Fk-Affiliate-Token": "403145a980b743eba1582a1626407ba4",
+          "Access-Control-Allow-Origin": "localhost",
+        },
+      });
+      console.log(data);
       let passedData = await data.json();
       setitemList(passedData);
       setloading(false);
-    }
+    
   });
 
- return (
+  return (
     <>
       <ShortNFilterBar />
       <div className=" flex flex-wrap  pt-16">
