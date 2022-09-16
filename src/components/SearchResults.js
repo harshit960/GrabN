@@ -25,7 +25,7 @@ export default function SearchResults() {
           headers: {
             "Fk-Affiliate-Id": "harshit960",
             "Fk-Affiliate-Token": "403145a980b743eba1582a1626407ba4",
-            "Access-Control-Allow-Origin": "localhost",
+            "Access-Control-Allow-Origin": "*",
           },
         }
       );
@@ -34,7 +34,7 @@ export default function SearchResults() {
         headers: {
           "Fk-Affiliate-Id": "harshit960",
           "Fk-Affiliate-Token": "403145a980b743eba1582a1626407ba4",
-          "Access-Control-Allow-Origin": "localhost",
+          "Access-Control-Allow-Origin": "*",
         },
       });
       console.log(data);
