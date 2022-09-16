@@ -3,13 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.7.0",
+    "@heroicons/react": "^2.0.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bluebird": "^3.7.2",
+    "cheerio": "^1.0.0-rc.12",
+    "json2csv": "^5.0.7",
+    "moment": "^2.29.4",
+    "ora": "^6.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "socks-proxy-agent": "^7.0.0",
+    "tough-cookie": "^4.1.2",
+    "web-vitals": "^2.1.4",
+    "yargs": "^17.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +47,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.9",
+    "json-loader": "^0.5.7",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
