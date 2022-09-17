@@ -28,12 +28,12 @@ export default function SearchResults() {
           return (
             <div class="flex justify-center w-1/2 mx-0 border-l border-b p-0 h-72 ">
               <div class="shadow-sm bg-white max-w-sm">
-                <a href={item.link}>
+                <a href={item.productBaseInfoV1.productUrl}>
                   <img
                     class="max-h-44"
                     src={
-                      item.thumbimages
-                        ? item.thumbimages
+                      item.productBaseInfoV1.imageUrls[0]
+                        ? item.productBaseInfoV1.imageUrls[0]
                         : "https://www.dpcanashik.com/uploads/default/blank.png"
                     }
                     alt=""
@@ -46,10 +46,10 @@ export default function SearchResults() {
 
                     <p class="text-gray-500 text-sm mb-0.5 indent-0"></p>
                     <h5 class="text-gray-800 text-sm font-medium mb-0 ">
-                      {"₹" + item.current_price}
+                      {"₹" + item.productBaseInfoV1.flipkartSpecialPrice}
                     </h5>
                     <h5 class="text-gray-400 text-sm font-medium mb-0 line-through">
-                      {"₹" + item.original_price}
+                      {"₹" + item.productBaseInfoV1.flipkartSellingPrice}
                     </h5>
                   </div>
                 </a>
