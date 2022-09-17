@@ -9,7 +9,7 @@ export default function SearchResults() {
   const [loading, setloading] = useState(true);
   const [searchQuery, setsearchQuery] = useState("");
   const { id } = useParams();
-
+  const [mgsize, setmgsize] = useState('200x200')
   useEffect(() => async () => {
     if (loading) {
       let url = "https://grabn-api.herokuapp.com/search/" + id;
@@ -31,11 +31,7 @@ export default function SearchResults() {
                 <a href={item.productBaseInfoV1.productUrl}>
                   <img
                     class="max-h-44"
-                    src={
-                      item.productBaseInfoV1.imageUrls[0]
-                        ? item.productBaseInfoV1.imageUrls[0]
-                        : "https://www.dpcanashik.com/uploads/default/blank.png"
-                    }
+                    src={item.productBaseInfoV1.imageUrls.mgsize}
                     alt=""
                   />
 
@@ -46,10 +42,10 @@ export default function SearchResults() {
 
                     <p class="text-gray-500 text-sm mb-0.5 indent-0"></p>
                     <h5 class="text-gray-800 text-sm font-medium mb-0 ">
-                      {"₹" + item.productBaseInfoV1.flipkartSpecialPrice}
+                      {"₹" + item.productBaseInfoV1.flipkartSpecialPrice.amount}
                     </h5>
                     <h5 class="text-gray-400 text-sm font-medium mb-0 line-through">
-                      {"₹" + item.productBaseInfoV1.flipkartSellingPrice}
+                      {"₹" + item.productBaseInfoV1.flipkartSellingPrice.amount}
                     </h5>
                   </div>
                 </a>
