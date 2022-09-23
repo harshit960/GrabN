@@ -247,6 +247,7 @@ export default function Navbar() {
 
       <div>
         <div className={Searcha}>
+          <form>
           <div class="flex justify-center w-full bg-white h-14 pt-1">
             <div class="input-group relative flex flex-wrap backdrop-blur-3xl backdrop-brightness-125 items-stretch w-full mb-0 border-b-2 border-gray-300">
               <button
@@ -274,6 +275,7 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
+              
               <input
                 type="search"
                 class="form-control relative flex-auto min-w-0 block px-2 py-1.5 text-base font-normal text-gray-400 bg-white bg-clip-padding   transition ease-in-out m-0 focus:text-gray-600 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -311,7 +313,7 @@ export default function Navbar() {
               </button>
               </Link>
             </div>
-          </div>
+          </div></form>
         </div>
       </div>
     </div>
