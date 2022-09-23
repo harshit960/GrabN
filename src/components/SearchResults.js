@@ -13,7 +13,7 @@ export default function SearchResults() {
   
   useEffect(() => async () => {
     if (loading) {
-      let url = "http://127.0.0.1:5000/search/" + id;
+      let url = "https://grabn-api.herokuapp.com/search/" + id;
       let data = await fetch(url);
       let passedData = await data.json();
       setitemList(passedData.products);
