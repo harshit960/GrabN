@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ShortNFilterBar from "./ShortNFilterBar";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -13,7 +13,8 @@ export default function SearchResults() {
   
   useEffect(() => async () => {
     if (loading) {
-      let url = "https://grabn-api.herokuapp.com/search/" + id;
+      
+      let url = "http://127.0.0.1:5000/search/" + id;
       let data = await fetch(url);
       let passedData = await data.json();
       setitemList(passedData.products);
@@ -27,7 +28,7 @@ export default function SearchResults() {
       <div className=" flex flex-wrap  pt-16">
         {itemList.map((item) => {
           return (
-            <div class="flex justify-center w-1/2 mx-0 border-l border-b p-0 h-72 ">
+            <div class="flex justify-center w-1/2 mx-0 border-l border-b p-0 h-84 ">
               <div class="shadow-sm bg-white max-w-sm justify-center content-center">
                 <a href={item.productUrl} className="flex flex-col ">
                   
