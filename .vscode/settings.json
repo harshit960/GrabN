@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/43a89dd6-af98-494c-b033-c2cbbb4022e9/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/grabon",
+    "appService.deploySubpath": "."
+}

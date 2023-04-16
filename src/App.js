@@ -22,7 +22,7 @@ function App() {
           <Route path="/Search/:id" element={<SearchResults/>} />
           
         </Routes>
-        <Footer/>
+        
       </BrowserRouter>
     </>
   );
